@@ -4,13 +4,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Country Clips | Ossian, Indiana | Hair and Beauty Salon</title>
+        <title>Waggin & Braggin Pet Services | Ossian, Indiana</title>
         <meta name="theme-color" content="#000000">
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="description" content="A description of the page"> <!-- todo -->
         <meta name="robots" content="index,follow">
         <meta name="googlebot" content="index,follow">
-        <meta name="geo.position" content="40.916980;-85.223410">
+        <meta name="geo.position" content="40.846460;-85.165840">
         <meta name="geo.region" content="US-IN">
         <meta name="geo.placename" content="Ossian">
         <meta name="apple-mobile-web-app-title" content="App Title"> <!-- todo -->
@@ -21,70 +21,95 @@
         <link rel="manifest" href="manifest.json"> <!-- todo -->
         <link rel="author" href="humans.txt"> <!-- todo -->
         <link rel="stylesheet" href="styles.css">
-        <link rel="dns-prefetch" href="//countryclips.salon/">
-        <link rel="preconnect" href="https://www.countryclips.salon/">
-        <link rel="prefetch" href="https://www.countryclips.salon/">
-        <link rel="prerender" href="https://countryclips.salon/">
+        <link rel="dns-prefetch" href="//wagginbraggin.com/">
+        <link rel="preconnect" href="https://www.wagginbraggin.com/">
+        <link rel="prefetch" href="https://www.wagginbraggin.com/">
+        <link rel="prerender" href="https://wagginbraggin.com/">
         <link rel="icon" sizes="192x192" href="/path/to/icon.png"> <!-- todo -->
         <link rel="apple-touch-icon" href="/path/to/apple-touch-icon.png"> <!-- todo -->
         <link rel="apple-touch-startup-image" href="/path/to/launch.png"> <!-- todo -->
         <link rel="mask-icon" href="/path/to/icon.svg" color="blue"> <!-- todo -->
     </head>
+
     <body>
 
-        <header>header</header>
-        <main>main</main>
-        <footer>footer</footer>
-        NEED TO REPLACE WITH WAGGIN & BRAGGIN
-        <br/><br/><br/>
-        <div>HairSalon, BeautySalon</div>
-        <div>Country Clips</div>
-        <div>17015 Coverdale Rd, Ossian, IN 46777</div>
-        <div>(260) 494-4746</div>
-        <div>countryclips2018@yahoo.com</div>
-        <div>https://www.facebook.com/CountryClips2018/</div>
-        <div>https://www.instagram.com/countryclips2018/</div>
-        <div> 
-            Monday	Closed
-            Tuesday	8AM–8PM
-            Wednesday	8AM–8PM
-            Thursday	8AM–8PM
-            Friday	8AM–1PM
-            Saturday	8AM–1PM
-            Sunday	Closed
-        </div>
-        <div>https://square.site/book/72QFYQHZMDGN1/country-clips-ossian-in</div>
-        <div>https://squareup.com/appointments/book/ba366ec9-01af-404c-8d96-d6dfc8088937/72QFYQHZMDGN1/services</div>
+        <div class="master">
+            <header class="header">
+                <div class="logo">
+                    <a href="/" class="logo__link">
+                        <img src="" alt="" class="logo__img" />
+                    </a>
+                </div>
+                <div class="nav">
+                    <nav class="nav__nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="#services" class="nav__link">Services</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#about" class="nav__link">About</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#contact" class="nav__link">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
 
-        <script type="application/json-ld">
+            <main>main</main>
+
+            <footer>footer</footer>
+
+            <br/><br/><br/>
+            <div>HairSalon, BeautySalon</div>
+            <div>Waggin & Braggin Pet Services</div>
+            <div>7145 N State Rd 1, Ossian, IN 46777</div>
+            <div>(260) 258-2606</div>
+            <div>wagginandbragginservices@gmail.com</div>
+            <div>https://www.facebook.com/WagginandbragginOssianIndiana</div>
+            <div>https://www.instagram.com/WagAndBrag/</div>
+            <div> 
+                Monday 8AM - 1PM, 5PM - 7PM
+                Tuesday	8AM - 1PM, 5PM - 7PM
+                Wednesday 8AM - 1PM
+                Thursday 8AM - 1PM, 5PM - 7PM
+                Friday 8AM - 5PM
+                Saturday 12PM - 4PM
+                Sunday Closed
+            </div>
+        
+        </div>
+
+        <script type="application/ld+json">
             {
-                "@context": {
-                    "name": "http://schema.org/name",
-                    "description": "http://schema.org/description",
-                    "image": {
-                        "@id": "http://schema.org/image",
-                        "@type": "@id"
-                    },
-                    "geo": "http://schema.org/geo",
-                    "latitude": {
-                        "@id": "http://schema.org/latitude",
-                        "@type": "xsd:float"
-                    },
-                    "longitude": {
-                        "@id": "http://schema.org/longitude",
-                        "@type": "xsd:float"
-                    },
-                    "xsd": "http://www.w3.org/2001/XMLSchema#"
-                },
-                "name": "The Empire State Building",
-                "description": "The Empire State Building is a 102-story landmark in New York City.",
-                "image": "http://www.civil.usherbrooke.ca/cours/gci215a/empire-state-building.jpg",
-                "geo": {
-                    "latitude": "40.75",
-                    "longitude": "73.98"
-                }
+                "@context": "https://schema.org/",
+                "@graph" : [
+                    {
+                        "@type": "LocalBusiness",
+                        "name": "Waggin & Braggin Pet Services",
+                        "address" : {
+                            "@type" : "PostalAddress",
+                            "streetAddress": "7145 N State Rd 1",
+                            "addressLocality": "Ossian",
+                            "addressRegion": "Indiana",
+                            "postalCode": "46777",
+                            "addressCountry": "USA"
+                        },
+                        "telephone": "(260) 258-2606",
+                        "url": "https://www.wagginbraggin.com",
+                        "image" : {
+                            "@type" : "ImageObject",
+                            "url" : "https://www.wagginbraggin.com/logo.png"
+                        },
+                        "areaServed": ["Ossian","Fort Wayne"], 
+                        "openingHours" : [
+                            "Mo 08:00-13:00, 17:00-19:00", "Tu 08:00-13:00, 17:00-19:00", "We 08:00-13:00", "Th 08:00-13:00, 17:00-19:00", "Fr 08:00-17:00", "Sa 12:00-16:00"
+                        ]
+                    }
+                ]
             }
-        </script> <!-- todo -->
+        </script>
 
     </body>
 </html>

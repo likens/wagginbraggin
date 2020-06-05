@@ -1,2 +1,2 @@
-# countryclips
-HTML landing page for countryclips.salon
+# wagginbraggin
+HTML landing page for wagginbraggin.com
