@@ -1,3 +1,8 @@
+:root {
+	--mintGreen: #a9bdb2;
+	--darkGreen: #154c2f;
+}
+
 *,
 *::before,
 *::after {
