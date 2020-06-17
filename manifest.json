@@ -1,0 +1,21 @@
+{
+	"short_name": "Waggin & Braggin",
+	"name": "Waggin & Braggin Pet Services",
+	"icons": [
+		{
+			"src": "/assets/img/logo192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "/assets/img/logo512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"start_url": "/",
+	"display": "fullscreen",
+	"theme_color": "#a9bdb2",
+	"background_color": "#ffffff"
+  }
+  

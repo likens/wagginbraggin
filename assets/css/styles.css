@@ -32,7 +32,8 @@ body {
 		'Apple Color Emoji',
         'Segoe UI Emoji';
     font-size: 1.6rem;
-    margin: 0;
+	margin: 0;
+	font-family: 'Balsamiq Sans', cursive;
 }
 
 abbr[title] {
@@ -147,4 +148,26 @@ progress {
 
 summary {
 	display: list-item;
+}
+
+
+
+
+
+
+
+
+
+
+.social__svg {
+	width: 4.8rem;
+	height: 4.8rem;
+}
+
+.social__svg--fb {
+	fill: #1877F2;
+}
+
+.social__svg--ig {
+	fill: #E4405F;
 }
