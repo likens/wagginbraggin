@@ -27,16 +27,15 @@ html {
 		sans-serif,
 		'Apple Color Emoji',
         'Segoe UI Emoji';
-    font-size: 67.5%;
-	line-height: 1.25;
+    font-size: 62.5%;
 	-webkit-text-size-adjust: 100%;
 }
 
 body {
     font-size: 1.6rem;
+	line-height: 1.25;
 	margin: 0;
-	font-family: 'Balsamiq Sans', cursive;
-	color: var(--mineShaft);
+	padding: 0;
 }
 
 abbr[title] {
@@ -170,16 +169,64 @@ summary {
 
 
 
-
+body {
+	font-family: 'Balsamiq Sans', cursive;
+	color: var(--mineShaft);
+}
 
 .header {
 	display: grid;
 	grid-template-columns: min-content 1fr min-content;
+	grid-gap: 2rem;
 	padding: 2rem;
+	align-items: center;
+}
+
+.touch__link {
+	color: var(--parsley);
+	text-decoration: none;
+	font-weight: 700;
+	display: grid;
+	grid-gap: 1rem;
+	background: var(--powderAsh);
+	padding: .5rem 1rem;
+	border-radius: 1rem;
+	border:2px dotted var(--parsley);
+}
+
+.touch__icon {
+	text-align: center;
+	max-height: 2.4rem;
+}
+
+.touch__svg {
+	fill: var(--parsley);
+	width: 2.4rem;
+	height: 2.4rem;
+}
+
+.touch__text {
+	line-height: 1;
 }
 
 .nav {
 	grid-column-end: span 3;
+}
+
+.nav__list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav__item {
+	padding: 0 2.5vw;
+}
+
+.nav__link {
+	color: var(--parsley);
+	text-decoration: none;
+	font-size: 1.8rem;
 }
 
 .section {
@@ -188,6 +235,11 @@ summary {
 
 .section--about {
 	background: var(--sweetCorn);
+}
+
+.section__contain {
+	max-width: 80rem;
+	margin: 0 auto;
 }
 
 .section__heading {
@@ -224,15 +276,11 @@ summary {
 }
 
 .info {
-	display: grid;
-	grid-row-gap: 1rem;
 	background: var(--powderAsh);
 	padding: 2rem 2rem 8rem;
-	text-align: center;
 	position: relative;
 	border-width: 1px 0;
 	border-style: solid;
-	color: var(--parsley);
 }
 
 .info:after {
@@ -250,9 +298,24 @@ summary {
 	height: 8rem;
 }
 
+.info__contain {
+	display: grid;
+	grid-row-gap: 1rem;
+	text-align: center;
+	color: var(--parsley);
+	max-width: 80rem;
+	margin: 0 auto;
+}
+
+.info__full {
+	display: grid;
+	grid-row-gap: 1rem;
+}
+
 .info__name {
 	font-size: 2rem;
 	font-weight: 700;
+	padding: 0 0 1rem;
 }
 
 .info__name span {
@@ -269,9 +332,9 @@ summary {
 
 .info__hours {
 	display: grid;
-	grid-gap: .5rem 1rem;
+	grid-gap: .5rem 1.5rem;
 	grid-template-columns: min-content 1fr;
-	padding-top: 1rem;
+	padding: 2rem 0 0;
 	text-align: left;
 	margin: auto;
 }
@@ -290,7 +353,7 @@ summary {
 }
 
 .social__item {
-	padding: 2rem 1rem;
+	padding: 2rem 1rem 1.5rem;
 }
 
 .social__svg {
@@ -306,8 +369,110 @@ summary {
 	fill: #E4405F;
 }
 
+.payments {
+	max-width: 15rem;
+	margin: 0 auto;
+}
+
+.payments__list {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.payments__item {
+	width: 33.333%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: .5rem;
+}
+
+.payments__svg {
+	width: 3.2rem;
+}
+
+.payments__svg--sq {
+	fill: #3e4348
+}
+
+.payments__svg--gp {
+	fill: #4285F4;
+}
+
+.payments__svg--vi {
+	fill: #142787;
+}
+
+.payments__svg--mc {
+	fill: #eb001b;
+}
+
+.payments__svg--ae {
+	fill: #2e77bc;
+}
+
+.payments__svg--di {
+	fill: #ff6000;
+}
+
 .copyright {
 	font-size: 1.2rem;
 	text-align: center;
-	padding:0 0 2rem;
+	padding: 1.5rem 0 2rem;
+}
+
+@media all and (min-width:600px) {
+
+	.section {
+		padding: 3rem;
+	}
+	.about {
+		display: flex;
+		align-items: center;
+	}
+	.about__head {
+		min-width: 22rem;
+		padding:0 2rem 0 0;
+	}
+	.info {
+		padding:3rem 3rem 8rem;
+	}
+	.info__contain {
+		text-align: left;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.info__full {
+		display: block;
+		font-size: 1.8rem;
+	}
+	.info__full > * {
+		padding: 0 0 1rem;
+	}
+	.info__name {
+		font-size: 2.4rem;
+	}
+	.info__name,
+	.info__email {
+		justify-content: flex-start;
+	}
+	.info__hours {
+		padding: 0;
+		margin: 0 0 0 auto;
+	}
+	.payments {
+		max-width: none;
+	}
+	.payments__list {
+		justify-content: center;
+	}
+	.payments__item {
+		width: auto;
+		padding: .5rem 1rem 1rem;
+	} 
+	.copyright {
+
+	}
 }
