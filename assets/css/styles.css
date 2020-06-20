@@ -160,15 +160,37 @@ summary {
 
 
 .master--uc {
-	padding: 8vh 2rem 2rem;
-	display: grid;
-	grid-gap: 4rem;
+	padding: 4vh 4vw;
+	height: 100vh;
+	position: relative;
+	background-color: var(--powderAsh);
 }
 
-.master--uc > * {
+.master--uc:after {
+	content: '';
+	position: absolute;
+	bottom:0;
+	left:0;
+	background-image: url('../img/fence.svg');
+	background-position: 0 2rem;
+	background-repeat: repeat-x;
+	height: 12rem;
+	width: 100%;
+	z-index: 10;
+}
+
+.master--uc .splash {
+	position: relative;
+	z-index: 20;
+	display: grid;
+	grid-gap: 4rem;
 	max-width: 55rem;
 	margin: 0 auto;
 	width: 100%;
+	padding: 4rem;
+	background: #fff;
+	border: 2px dotted var(--parsley);
+	border-radius: 1rem;
 }
 
 .master--uc .logo__link {
