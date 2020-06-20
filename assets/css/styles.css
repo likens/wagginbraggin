@@ -159,12 +159,62 @@ summary {
 
 
 
+.master--uc {
+	padding: 8vh 2rem 2rem;
+	display: grid;
+	grid-gap: 4rem;
+}
 
+.master--uc > * {
+	max-width: 55rem;
+	margin: 0 auto;
+	width: 100%;
+}
 
+.master--uc .logo__link {
+	display: inline-block;
+}
 
+.master--uc .touch__link {
+	font-size: 2.4rem;
+	display: flex;
+	align-items: center;
+	padding: 2rem;
+}
 
+.master--uc .intro {
+	font-size: 2rem;
+}
 
+.master--uc .buttons {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
 
+.master--uc .buttons > * {
+	margin: 0 1rem 1rem;
+}
+
+.master--uc .touch__text {
+	margin-left: 1rem;
+}
+
+.master--uc .logo__link {
+	display: block;
+	max-width: 25rem;
+	margin: 0 auto;
+}
+
+.master--uc .social__item {
+	padding: 0 1rem;
+}
+
+.master--uc .social__svg {
+	width: 4rem;
+	height: 4rem
+}
 
 
 
