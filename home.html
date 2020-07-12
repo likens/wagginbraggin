@@ -101,13 +101,31 @@
                     </div>
                 </section>
                 <section class="section section--contact" id="contact">
-                    <h2 class="section__heading">Contact Us</h2>
-                    <div class="section__block">
-                        <form name="TEST" netlify>
-                              <label>Name <input type="text" name="name" /></label>
-                              <label>Email <input type="email" name="email" /></label>
-                              <button type="submit">Send</button>
-                          </form>
+                    <div class="section__contain section__contain--contact">
+                        <h2 class="section__heading">Contact Us</h2>
+                        <div class="section__block">
+                            <form name="Contact Us" netlify class="form">
+                                <div class="form__field form__field--name">
+                                    <input class="form__input" placeholder="Name" type="text" name="name" id="name" required>
+                                    <label class="form__label" for="name">Name</label>
+                                </div>
+                                <div class="form__field form__field--email">
+                                    <input class="form__input" placeholder="Email" type="text" name="email" id="email" required>
+                                    <label class="form__label" for="email">Email</label>
+                                </div>
+                                <div class="form__field form__field--phone">
+                                    <input class="form__input" placeholder="Phone" type="tel" name="phone" id="phone">
+                                    <label class="form__label" for="phone">Phone</label>
+                                </div>
+                                <div class="form__field form__field--comments">
+                                    <textarea class="form__input form__input--textarea" placeholder="Comments" name="comments" required id="comments"></textarea>
+                                    <label class="form__label" for="comments">How can we help you?</label>
+                                </div>
+                                <div class="form__submit">
+                                    <button class="form__button" type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </section>
                 <section class="section section--about" id="about">
