@@ -1,9 +1,24 @@
 .header {
-	display: grid;
-	grid-template-columns: min-content 1fr min-content;
-	grid-gap: 2rem;
-	padding: 2rem;
-	align-items: center;
+	@media all and (min-width: $mdBreak) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 20;
+		padding: 2rem 0 0;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		&__action {
+			padding: 0 2rem;
+		}
+	}
+	@media all and (min-width: $lgBreak) {
+		padding: 5rem 0 0;
+		max-width: 160rem;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 }
 
 .touch {
@@ -11,24 +26,48 @@
 		color: $parsley;
 		text-decoration: none;
 		font-weight: 700;
-		display: grid;
-		grid-gap: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		background: $powderAsh;
-		padding: .5rem 1rem;
-		border-radius: 1rem;
-		border:2px dotted $parsley;
+		padding: 1rem;
+		border-width: .2rem 0;
+		border-style: dotted;
+		border-color: $parsley;
 	}
 	&__icon {
 		text-align: center;
-		max-height: 2.4rem;
+		max-height: 1.8rem;
 	}
 	&__svg {
 		fill: $parsley;
-		width: 2.4rem;
-		height: 2.4rem;
 	}
 	&__text {
-		line-height: 1;
+		line-height: 1.4;
+		display: block;
+		text-align: center;
+	}
+	@media all and (min-width: $mdBreak) {
+		&__link {
+			color: $white;
+			background: 0;
+			border: 0;
+			font-size: 2rem;
+			width: 20rem;
+			padding: 0;
+			text-shadow: .2rem .2rem 1rem $parsley;
+		}
+		&__text {
+			text-align: center;
+		}
+	}
+	@media all and (min-width: $lgBreak) {
+		&__link {
+			width: 35rem;
+		}
+		&__text {
+			font-size: 3.2rem;
+		}
 	}
 }
 
@@ -54,8 +93,21 @@
 }
 
 .logo {
+	padding: 2rem 0;
 	&__img {
 		display: block;
-		max-width: 100%;
+		width: 100%;
+		max-width: 20rem;
+		margin: 0 auto;
+	}
+	@media all and (min-width: $mdBreak) {
+		padding: 0;
+		background: $white;
+		border-radius: 50%;
+	}
+	@media all and (min-width: $lgBreak) {
+		&__img {
+			max-width: 25rem;
+		}
 	}
 }

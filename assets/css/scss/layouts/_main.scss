@@ -1,19 +1,52 @@
+.main {
+	position: relative;
+	z-index: 10;
+}
+
 .section {
 	padding: 2rem;
+	&--hero {
+		background-size: cover;
+		background-image: url('../img/hero.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		min-height: 70vw;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-width: 0 0 .2rem;
+		border-style: dotted;
+		border-color: $black;
+		&:after {
+			content: '';
+			background: rgba($black, .5);
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 10;
+		}
+	}
+	&--intro {
+		border-width: 0 0 .2rem;
+		border-style: dotted;
+	}
 	&--about {
 		background: $sweetCorn;
 	}
 	&--contact {
 		background: $linkWater;
 		color: $matisse;
-		border-width: .1rem 0;
-		border-style: solid;
+		border-width: 0 0 .2rem;
+		border-style: dotted;
 	}
 	&--services {
 		background: $powderAsh;
 		color: $parsley;
-		border-width: .1rem 0;
-		border-style: solid;
+		border-width: 0 0 .2rem;
+		border-style: dotted;
 	}
 	&__contain {
 		max-width: 80rem;
@@ -21,12 +54,24 @@
 		&--contact {
 			max-width: 70rem;
 		}
+		&--intro {
+			max-width: 120rem;
+		}
 	}
 	&__heading {
 		margin: 0;
 		text-align: center;
 		font-size: 3rem;
 		padding: 0 0 1rem;
+		position: relative;
+		z-index: 20;
+		&--hero {
+			color: $white;
+			text-shadow: .2rem .2rem 1rem $parsley;
+		}
+		&--intro {
+			padding: 0 0 3rem;
+		}
 	}
 	&__intro {
 		padding: 0 0 2rem;
@@ -35,11 +80,17 @@
 		small {
 			font-size: 1.2rem;
 		}
+		&--intro {
+			text-align: left;
+		}
 	}
 	@media all and (min-width: $mdBreak) {
 		padding: 3rem 3rem 5rem;
 		&__heading {
 			font-size: 3.6rem;
+			&--hero {
+				padding: 20vw 0 0;
+			}
 		}
 		&__intro {
 			padding: 0 0 3rem;
@@ -48,8 +99,16 @@
 	}
 	@media all and (min-width: $lgBreak) {
 		padding: 4rem 4rem 6rem;
+		&--hero {
+			height: 100vh;
+			min-height: 0;
+		}
 		&__heading {
 			font-size: 4.4rem;
+			&--hero {
+				padding: 0;
+				font-size: 6rem;
+			}
 		}
 		&__intro {
 			padding: 0 0 4rem;
@@ -155,7 +214,7 @@
 	}
 	&__button {
 		background: 0;
-		border: .2rem solid $matisse;
+		border: .2rem dotted $matisse;
 		color: $matisse;
 		font-size: 1.8rem;
 		padding: 1rem 2rem;
@@ -169,9 +228,7 @@
 	}
 	@media all and (min-width: $mdBreak) {
 		grid-gap: 4rem 2rem;
-		grid-template-areas: "name email phone"
-							 "comments comments comments"
-							 "submit submit submit";
+		padding: 4rem 4rem 3rem;
 		&__submit {
 			margin-top: -1rem;
 		}
@@ -179,31 +236,13 @@
 }
 
 .service {
-	&s {
-		display: grid;
-		grid-gap: 3rem;
-		&__heading {
-			text-align: center;
-			font-weight: $bold;
-			font-size: 2.4rem;
-			padding: 0 0 2rem;
-		}
-	}
-	@media all and (min-width: $lgBreak) {
-		&s {
-			grid-gap: 5rem;
-			&__heading {
-				font-size: 3.2rem;
-				padding: 0 0 3rem;
-			}
-		}
-	}
-}
-
-.package {
 	@include card($parsley);
 	display: grid;
 	grid-gap: 3rem;
+	&__extra {
+		display: grid;
+		grid-gap: 3rem;
+	}
 	&__list {
 		display: grid;
 		grid-gap: 2rem;
@@ -211,19 +250,12 @@
 		margin: 0 auto;
 		padding: 0;
 		list-style-type: none;
-		@media all and (min-width: $mdBreak) {
-			grid-template-columns: repeat(2, 1fr);
-			grid-gap: 3rem;
-		}
-		@media all and (min-width: $lgBreak) {
-			grid-template-columns: repeat(4, 1fr);
-			grid-gap: 5rem;
-		}
 	}
 	&__img {
 		margin: 0 auto;
 		display: block;
-		max-width: 100%;
+		width: 100%;
+		max-width: 20rem;
 		border-radius: 50%;
 	}
 	&__heading {
@@ -258,16 +290,19 @@
 				background-repeat: repeat-x;
 				height: 1em;
 				margin: 0 .5rem;
+				min-width: 1rem;
 			}
 		}
 		&-label {
 			font-size: 2rem;
 			font-weight: $bold;
 			order: 1;
+			line-height: 1;
 		}
 		&-value {
 			font-size: 1.4rem;
 			order: 3;
+			white-space: nowrap;
 		}
 		&-dollar {
 			display: inline-block;
@@ -276,58 +311,23 @@
 			padding-left: .25rem;
 		}
 	}
-}
-
-.alacarte {
-	&__list {
-		padding: 0;
-		margin: 0 auto;
-		list-style-type: none;
-		display: grid;
-		grid-gap: 2rem;
-		max-width: 160rem;
-		grid-template-columns: repeat(2, 1fr);
-	}
-	&__item {
-		@include card($parsley);
-		padding: 2rem 1rem;
-		text-align: center;
-		font-weight: $bold;
-		font-size: 1.8rem;
-		display: grid;
-		grid-gap: 1rem;
-	}
-	&__name {
-		align-self: flex-end;
-	}
-	&__cost {
-		line-height: 1;
-		align-self: flex-start;
-		&-extra {
-			display: block;
-			font-size: 1.6rem;
-			padding: 1rem 0 0;
-		}
-	}
 	@media all and (min-width: $mdBreak) {
 		&__list {
+			grid-template-columns: repeat(2, 1fr);
 			grid-gap: 3rem;
-			grid-template-columns: repeat(3, 1fr);
 		}
-		&__item {
-			min-height: 14rem;
-			font-size: 2.4rem;
-		}
-		&__cost {
-			&-extra {
-				font-size: 1.8rem;
-			}
+		&--extra {
+			grid-column-end: span 2;
+
 		}
 	}
 	@media all and (min-width: $lgBreak) {
 		&__list {
-			grid-gap: 5rem;
-			grid-template-columns: repeat(6, 1fr);
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 2vw;
+		}
+		&--extra {
+			grid-column-start: 2;
 		}
 	}
 }
