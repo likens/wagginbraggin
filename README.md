@@ -1,2 +1,2 @@
-# wagginbraggin
-HTML landing page for wagginbraggin.com
+# wagginbraggin.com
+HTML landing/home page for wagginbraggin.com
