@@ -19,6 +19,15 @@
 		background-repeat: repeat-x;
 		height: 8rem;
 	}
+	&__link {
+		color: $parsley;
+		text-decoration: none;
+	}
+	&__address {
+		&-line {
+			display: block;
+		}
+	}
 	&__contain {
 		display: grid;
 		grid-row-gap: 1rem;
@@ -36,6 +45,11 @@
 		padding: 0 0 1rem;
 		span {
 			margin: 0 .25rem;
+		}
+	}
+	&__email {
+		span {
+			display: inline-block;
 		}
 	}
 	&__name,
