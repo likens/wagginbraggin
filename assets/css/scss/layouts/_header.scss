@@ -1,4 +1,13 @@
 .header {
+	&__action {
+		color: $parsley;
+		background: $powderAsh;
+		border-width: .2rem 0;
+		border-style: dotted;
+		border-color: $parsley;
+		font-weight: 700;
+		padding: 1rem;
+	}
 	@media all and (min-width: $mdBreak) {
 		position: absolute;
 		top: 0;
@@ -10,7 +19,13 @@
 		justify-content: space-around;
 		align-items: center;
 		&__action {
-			padding: 0 2rem;
+			padding: 0 1rem;
+			color: $white;
+			background: 0;
+			border: 0;
+			font-size: 2rem;
+			width: 25rem;
+			text-shadow: .2rem .2rem 1rem $parsley;
 		}
 	}
 	@media all and (min-width: $lgBreak) {
@@ -18,6 +33,9 @@
 		max-width: 160rem;
 		left: 50%;
 		transform: translateX(-50%);
+		&__action {
+			width: 35rem;
+		}
 	}
 }
 
@@ -25,15 +43,12 @@
 	&__link {
 		color: $parsley;
 		text-decoration: none;
-		font-weight: 700;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: $powderAsh;
-		padding: 1rem;
-		border-width: .2rem 0;
-		border-style: dotted;
-		border-color: $parsley;
+		small {
+			font-size: 70%;
+		}
 	}
 	&__icon {
 		text-align: center;
@@ -50,21 +65,12 @@
 	@media all and (min-width: $mdBreak) {
 		&__link {
 			color: $white;
-			background: 0;
-			border: 0;
-			font-size: 2rem;
-			width: 20rem;
-			padding: 0;
-			text-shadow: .2rem .2rem 1rem $parsley;
 		}
 		&__text {
 			text-align: center;
 		}
 	}
 	@media all and (min-width: $lgBreak) {
-		&__link {
-			width: 35rem;
-		}
 		&__text {
 			font-size: 3.2rem;
 		}
