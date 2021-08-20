@@ -327,11 +327,11 @@
 	}
 	@media all and (min-width: $lgBreak) {
 		&__list {
-			grid-template-columns: repeat(4, 1fr);
+			grid-template-columns: repeat(2, 1fr);
 			grid-gap: 2vw;
 		}
 		&--extra {
-			grid-column-start: 2;
+			grid-column-start: 1;
 		}
 	}
 }
